@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.lftechnology.quest.qa.model.Answer">
+		<field name="id" type="long" />
+		<field name="answer" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="questionId" type="long" />
+		<field name="companyId" type="long" />
+	</model>
+	<model name="com.lftechnology.quest.qa.model.Question">
+		<field name="id" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+	</model>
+</model-hints>
