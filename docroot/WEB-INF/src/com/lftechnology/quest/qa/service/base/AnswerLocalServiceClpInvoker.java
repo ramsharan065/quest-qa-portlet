@@ -132,9 +132,9 @@ public class AnswerLocalServiceClpInvoker {
 
 		_methodParameterTypes49 = new String[] { "long" };
 
-		_methodName50 = "getAll";
+		_methodName50 = "getAllOfQuestion";
 
-		_methodParameterTypes50 = new String[] {  };
+		_methodParameterTypes50 = new String[] { "long" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -258,7 +258,7 @@ public class AnswerLocalServiceClpInvoker {
 
 		if (_methodName50.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes50, parameterTypes)) {
-			return AnswerLocalServiceUtil.getAll();
+			return AnswerLocalServiceUtil.getAllOfQuestion(((Long)arguments[0]).longValue());
 		}
 
 		throw new UnsupportedOperationException();

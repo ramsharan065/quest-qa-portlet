@@ -60,7 +60,11 @@ ${questions[0].description} from el
 			<portlet:actionURL name="editMode" var="editUrl">
 				<portlet:param name="id" value="<%=primKey.toString()%>" />
 			</portlet:actionURL>
-			<a href="${editUrl }">Editme</a>
+			<a href="${editUrl }">Editme</a><br/>
+			<liferay-portlet:renderURL var="changePortlet" portletName="serviceclass_WAR_servicedemoportlet">
+			
+			</liferay-portlet:renderURL>
+			<a href="${changePortlet }">change</a><br/>
 		</liferay-ui:search-container-column-text>
 	</liferay-ui:search-container-row>
 	<liferay-ui:search-iterator />

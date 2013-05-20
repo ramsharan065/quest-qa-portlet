@@ -287,8 +287,9 @@ public class AnswerLocalServiceUtil {
 		return getService().delete(id);
 	}
 
-	public static java.util.List<com.lftechnology.quest.qa.model.Answer> getAll() {
-		return getService().getAll();
+	public static java.util.List<com.lftechnology.quest.qa.model.Answer> getAllOfQuestion(
+		long questinId) {
+		return getService().getAllOfQuestion(questinId);
 	}
 
 	public static void clearService() {

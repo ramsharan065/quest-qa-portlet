@@ -132,9 +132,9 @@ public class AnswerLocalServiceClp implements AnswerLocalService {
 
 		_methodParameterTypes22 = new String[] { "long" };
 
-		_methodName23 = "getAll";
+		_methodName23 = "getAllOfQuestion";
 
-		_methodParameterTypes23 = new String[] {  };
+		_methodParameterTypes23 = new String[] { "long" };
 	}
 
 	public com.lftechnology.quest.qa.model.Answer addAnswer(
@@ -751,12 +751,13 @@ public class AnswerLocalServiceClp implements AnswerLocalService {
 		return (com.lftechnology.quest.qa.model.Answer)ClpSerializer.translateOutput(returnObj);
 	}
 
-	public java.util.List<com.lftechnology.quest.qa.model.Answer> getAll() {
+	public java.util.List<com.lftechnology.quest.qa.model.Answer> getAllOfQuestion(
+		long questinId) {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableLocalService.invokeMethod(_methodName23,
-					_methodParameterTypes23, new Object[] {  });
+					_methodParameterTypes23, new Object[] { questinId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);

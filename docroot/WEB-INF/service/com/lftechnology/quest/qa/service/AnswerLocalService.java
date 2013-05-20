@@ -255,5 +255,6 @@ public interface AnswerLocalService extends BaseLocalService,
 	public com.lftechnology.quest.qa.model.Answer delete(long id);
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<com.lftechnology.quest.qa.model.Answer> getAll();
+	public java.util.List<com.lftechnology.quest.qa.model.Answer> getAllOfQuestion(
+		long questinId);
 }

@@ -280,8 +280,9 @@ public class AnswerLocalServiceWrapper implements AnswerLocalService,
 		return _answerLocalService.delete(id);
 	}
 
-	public java.util.List<com.lftechnology.quest.qa.model.Answer> getAll() {
-		return _answerLocalService.getAll();
+	public java.util.List<com.lftechnology.quest.qa.model.Answer> getAllOfQuestion(
+		long questinId) {
+		return _answerLocalService.getAllOfQuestion(questinId);
 	}
 
 	/**

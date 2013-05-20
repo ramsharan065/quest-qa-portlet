@@ -17,7 +17,12 @@ package com.lftechnology.quest.qa.service.impl;
 import java.util.List;
 
 import com.lftechnology.quest.qa.model.Answer;
+import com.lftechnology.quest.qa.service.AnswerLocalServiceUtil;
 import com.lftechnology.quest.qa.service.base.AnswerLocalServiceBaseImpl;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil;
+import com.liferay.portal.kernel.exception.SystemException;
 
 /**
  * The implementation of the answer local service.
@@ -54,7 +59,17 @@ public class AnswerLocalServiceImpl extends AnswerLocalServiceBaseImpl {
 	public Answer delete(long id){
 		return null;
 	}
-	public List<Answer> getAll(){
-		return null;
+	public List<Answer> getAllOfQuestion(long questinId){
+		List<Answer> answers = null;
+		//answerPersistence.findWithDynamicQuery("FROM Answer WHERE questionId=:questionId");
+		DynamicQuery dq = new DynamicQueryFactoryUtil().forClass(Answer.class);
+		dq.add(RestrictionsFactoryUtil.eq("questionId", new Long(questinId)));
+		try {
+			answers = AnswerLocalServiceUtil.dynamicQuery(dq);
+		} catch (SystemException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return answers;
 	}
 }
