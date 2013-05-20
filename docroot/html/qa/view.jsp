@@ -32,7 +32,7 @@ ${questions[0].description} from el
 
 
 <liferay-ui:search-container emptyResultsMessage="question-empty-list"
-	delta="20">
+	delta="1">
 	<liferay-ui:search-container-results>
 
 		<%
